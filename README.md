@@ -3,6 +3,8 @@ This place is to accumulate the pieces for my personal use in data science and m
 
 Everything is linked below with high level comments and caveats. More thoughts and details are in the individual notebooks, as well as the required modules.
 
+[My Index page for all repositories.](https://github.com/zxfsheep/Index/blob/master/README.md)
+
 ## Models
 
 1. [Some common baseline (regression) models with `GridSearchCV`](https://github.com/zxfsheep/ML-building-blocks/blob/master/models/GridSearchCV_Baseline.ipynb), including linear regression, ridge regression, Lasso regression, ElasticNet, SVM. Tunable parameters are described in the notebook. I think these are useful for:
