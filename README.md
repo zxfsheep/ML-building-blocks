@@ -1,5 +1,5 @@
 ## Machine learning building blocks
-This place is to accumulate the pieces for my personal use in data science and machine learning projects.
+This place is to record and comment my codes for future use in data science and machine learning projects.
 
 Everything is linked below with high level comments and caveats. More thoughts and details are in the individual notebooks, as well as the required modules.
 
