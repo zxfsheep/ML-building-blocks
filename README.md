@@ -10,7 +10,7 @@ Everything is linked below with high level comments and caveats. More thoughts a
 1. [Some common baseline (regression) models with `GridSearchCV`](https://github.com/zxfsheep/ML-building-blocks/blob/master/models/GridSearchCV_Baseline.ipynb), including linear regression, ridge regression, Lasso regression, ElasticNet, SVM. Tunable parameters are described in the notebook. I think these are useful for:
    * Getting a quick baseline result for the problem, which serves as a sanity check.
    * Can throw in a small portion into the final result, which is somewhat a final regularization.
-   * Help to find a good KFold split for expensive models, as will be explained in my random-idea repository.
+   * Help to find a good KFold split for expensive models, as will be explained in my [random-idea](https://github.com/zxfsheep/ML-random-ideas/blob/master/README.md) repository.
 
 2. The best performing model for many common problems: Gradient tree boosting:
    * [XGBoost with `GridSearchCV`](https://github.com/zxfsheep/ML-building-blocks/blob/master/models/GridSearchCV_XGBoost.ipynb)
