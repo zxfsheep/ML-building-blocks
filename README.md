@@ -7,16 +7,16 @@ Everything is linked below with high level comments and caveats. More thoughts a
 
 ## Models
 
-1. [Some common baseline (regression) models with `GridSearchCV`](https://github.com/zxfsheep/ML-building-blocks/blob/master/models/GridSearchCV_Baseline.ipynb), including linear regression, ridge regression, Lasso regression, ElasticNet, SVM. Tunable parameters are described in the notebook. I think these are useful for:
+1. [Some common baseline (regression) models with `GridSearchCV`](https://nbviewer.jupyter.org/github/zxfsheep/ML-building-blocks/blob/master/models/GridSearchCV_Baseline.ipynb), including linear regression, ridge regression, Lasso regression, ElasticNet, SVM. Tunable parameters are described in the notebook. I think these are useful for:
    * Getting a quick baseline result for the problem, which serves as a sanity check.
    * Can throw in a small portion into the final result, which is somewhat a final regularization.
    * Help to find a good KFold split for expensive models, as will be explained in my [random-idea](https://github.com/zxfsheep/ML-random-ideas/blob/master/README.md) repository.
 
 2. The best performing model for many common problems: Gradient tree boosting:
-   * [XGBoost with `GridSearchCV`](https://github.com/zxfsheep/ML-building-blocks/blob/master/models/GridSearchCV_XGBoost.ipynb)
-   * [LightGBM with `GridSearchCV`](https://github.com/zxfsheep/ML-building-blocks/blob/master/models/GridSearchCV_LGBM.ipynb)
-   * [XGBoost with customized CV](https://github.com/zxfsheep/ML-building-blocks/blob/master/models/CustomCV_XGBoost.ipynb)
-   * [LightGBM with customized CV](https://github.com/zxfsheep/ML-building-blocks/blob/master/models/CustomCV_LGBM.ipynb)
+   * [XGBoost with `GridSearchCV`](https://nbviewer.jupyter.org/github/zxfsheep/ML-building-blocks/blob/master/models/GridSearchCV_XGBoost.ipynb)
+   * [LightGBM with `GridSearchCV`](https://nbviewer.jupyter.org/github/zxfsheep/ML-building-blocks/blob/master/models/GridSearchCV_LGBM.ipynb)
+   * [XGBoost with customized CV](https://nbviewer.jupyter.org/github/zxfsheep/ML-building-blocks/blob/master/models/CustomCV_XGBoost.ipynb)
+   * [LightGBM with customized CV](https://nbviewer.jupyter.org/github/zxfsheep/ML-building-blocks/blob/master/models/CustomCV_LGBM.ipynb)
    
    There are numerous articles on these models and their usage. Here I will discuss additional thoughts from practice:
    * Many people as well as the official documents mentioned that these modules might have technical issues with Scikit-learn, especially `GridSearchCV`. In particular, the extra booster parameters are not affected by `set_params()` method, and also the performance is very poor. I found solutions to these, as in the notebooks. In particular, I wrapped the modules with a Scikit-learn custom estimator which avoids the parameter issue. Also setting `return_train_score = False` in GridSearchCV avoids predicting training set.
@@ -30,4 +30,4 @@ Everything is linked below with high level comments and caveats. More thoughts a
 
 ## Utilities
 
-1. [Memory reduction trick to deal with large datasets in pandas.](https://github.com/zxfsheep/ML-building-blocks/blob/master/utilities/Reduce_Memory.ipynb) The data types that pandas automatically choose might be too much a waste, so we can manually search for the most efficient data type for each feature. This only needs to be run once if the dataset is static or large enough to be representative of unseen data. We can save the optimal data types and use them directly the next time we read in data.
+1. [Memory reduction trick to deal with large datasets in pandas.](https://nbviewer.jupyter.org/github/zxfsheep/ML-building-blocks/blob/master/utilities/Reduce_Memory.ipynb) The data types that pandas automatically choose might be too much a waste, so we can manually search for the most efficient data type for each feature. This only needs to be run once if the dataset is static or large enough to be representative of unseen data. We can save the optimal data types and use them directly the next time we read in data.
